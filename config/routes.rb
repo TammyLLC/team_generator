@@ -1,6 +1,8 @@
 TeamGenerator::Application.routes.draw do
   resources :teams
+  root 'welcome#home'
 
+  get "welcome/home"
   resources :students
 
   # The priority is based upon order of creation: first created -> highest priority.
