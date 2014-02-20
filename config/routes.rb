@@ -4,6 +4,7 @@ TeamGenerator::Application.routes.draw do
   
   get "welcome/home"
   get "/teams/num_teams"
+  post "/teams/randomize"
 
   resources :teams
   resources :students

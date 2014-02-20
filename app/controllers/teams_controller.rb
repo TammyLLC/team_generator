@@ -16,6 +16,10 @@ class TeamsController < ApplicationController
   def num_teams
   end
 
+  def randomize
+    @num_teams = params[:num]
+  end
+
   # GET /teams/new
   def new
     @team = Team.new
@@ -73,6 +77,6 @@ class TeamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
-      params.require(:team).permit(:student_id, :is_leader, :team_id, :num_teams)
+      params.require(:team).permit(:student_id, :is_leader, :team_id, :num_teams, :randomize)
     end
 end
