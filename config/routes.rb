@@ -1,9 +1,14 @@
 TeamGenerator::Application.routes.draw do
-  resources :teams
+  
   root 'welcome#home'
-
+  
   get "welcome/home"
+  get "/teams/num_teams"
+
+  resources :teams
   resources :students
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
